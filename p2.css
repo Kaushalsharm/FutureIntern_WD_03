@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(250, 250, 250);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    padding-left: 1.5%;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.nav-list a:hover {
+    background-color: #ccc;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-radius: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+}
+
+.right-nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-caption {
+    text-align: center;
+}
+
+.c-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#heading {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.div-papa1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.div-papa1 .box1, .box2, .box3, .box4, .box5, .box6, .box7 {
+    background-color: #f2f2f2;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-papa1 .box4 a, .box5 a, .box6 a, .box7 a {
+    text-decoration: none;
+    color: black;
+}

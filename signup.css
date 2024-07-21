@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    margin-top: -35px;
+    margin-left: -390px;
+    padding: 0;
+    overflow: hidden;
+    background: url('bg-14.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur('10px');
+    z-index: -1; /* Ensure the blur effect stays in the background */
+}
+#signup{
+    z-index: 1;
+}
+.content{
+    height: 495px;
+    width: 386px;
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+    color: #535353;
+    background-color: #F2F2F2;
+    border: none;
+    border-radius: 16px;
+    padding: 10px;
+    margin: 71px 0 0 1274px;
+    font-family: "ubuntu", sans-serif;
+}
+label{
+    font-size: 22px;
+}
+input{
+    font-size: 24px;
+    padding: 17px;
+    font-weight: 500;
+    background-color: #c4c2c2;
+}
+button{
+    background-color: rgba(253, 197, 94, 0.959);
+    border: none;
+    border-radius: 8px;
+    padding: 11px;
+    font-size: 22px;
+    margin-top: 18px;
+}
+button:hover{
+    background-color: rgba(212, 159, 60, 0.959);
+}

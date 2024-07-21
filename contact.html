@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Foodies.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="p.html"><img src="logo.png" alt="Foodies.com Logo" class="logo" height="51px" width="75px"></a>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <div class="dropdown">
+                    <a href="#">RECIPES</a>
+                    <div class="dropdown-content">
+                        <a href="index1.html">Breakfast & Brunch Recipes</a>
+                        <a href="lunch.html">Lunch Recipes</a>
+                        <a href="Appetizers.html">Appetizers & Snack Recipes</a>
+                        <a href="Dessert.html">Dessert Recipes</a>
+                        <a href="Drink.html">Drink & Cocktail Recipes</a>
+                        <a href="Side.html">Side Dish Recipes</a>
+                        <a href="Microwave.html">Microwave Recipes</a>
+                        <a href="Quick.html">Quick & Easy Recipes</a>
+                        <a href="Slow.html">Slow-Cooker Recipes</a>
+                        <a href="Air.html">Air Fryer Recipes</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">POPULAR</a>
+                    <div class="dropdown-content">
+                        <a href="Casserole.html">Casserole Recipes</a>
+                        <a href="chili.html">Chili Recipes</a>
+                        <a href="Soup.html">Soup Recipes</a>
+                        <a href="Pasta.html">Pasta Recipes</a>
+                        <a href="Bread.html">Bread Recipes</a>
+                        <a href="Cookie.html">Cookie Recipes</a>
+                        <a href="Salad.html">Salad Recipes</a>
+                        <a href="Tofu.html">Tofu Recipes</a>
+                        <a href="Copycat.html">Copycat Recipes</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">HEALTHY DIET</a>
+                    <div class="dropdown-content">
+                        <a href="Keto.html">Keto Recipes</a>
+                        <a href="Healthy.html">Healthy Recipes</a>
+                        <a href="Vegetarian.html">Vegetarian Recipes</a>
+                        <a href="Vegan.html">Vegan Recipes</a>
+                        <a href="Mediterranean.html">Mediterranean Diet Recipes</a>
+                        <a href="Weight.html">Weight Watchers Recipes</a>
+                        <a href="Carb.html">Low-Carb Recipes</a>
+                        <a href="Gluten.html">Gluten-Free Recipes</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">HOLIDAYS</a>
+                    <div class="dropdown-content">
+                        <a href="Party.html">Dinner Party Recipes</a>
+                        <a href="Game.html">Game Day Recipes</a>
+                        <a href="Valentines.html">Valentine's Day Recipes</a>
+                        <a href="Easter.html">Easter Recipes</a>
+                        <a href="Mother.html">Mother's Day Recipes</a>
+                        <a href="Memorial.html">Memorial Day Recipes</a>
+                        <a href="Halloween.html">Halloween Recipes</a>
+                        <a href="Hanukkah.html">Hanukkah Recipes</a>
+                    </div>
+                </div>
+                <li><a class="nav-links" href="contact.html">CONTACT US</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="right-nav">
+                <span><a href="#"><i class="fa-solid fa-magnifying-glass" id="glass"></i></a></span>
+                <span><a href="login.php"><i class="fa-regular fa-user" id="login"></i></a></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-us">
+            <h1>Contact Us</h1>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="successMessage" style="display:none; color: green;">Thank you for contacting us. We will get back to you shortly.</p>
+        </section>
+    </main>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: rgb(250, 250, 250);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            padding-left: 1.5%;
+            position: relative;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-right: 68px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .nav-list a:hover {
+            background-color: #ccc;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            padding: 10px 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            border-radius: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .line {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+        }
+
+        .right-nav {
+            display: flex;
+            gap: 26px;
+            align-items: center;
+            margin-bottom: 16px;
+            margin-right: 49px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px);
+            background-color: #dfdcdc;
+        }
+
+        .contact-us {
+            background-color: #e7d5d5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .contact-us h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .contact-us label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .contact-us input,
+        .contact-us textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-us button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffc900c4;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-us button:hover {
+            background-color: #b39200;
+        }
+    </style>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Foodies.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="p.html"><img src="logo.png" alt="Foodies.com Logo" class="logo" height="51px" width="75px"></a>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <div class="dropdown">
+                    <a href="#">RECIPES</a>
+                    <div class="dropdown-content">
+                        <a href="index1.html">Breakfast & Brunch Recipes</a>
+                        <a href="lunch.html">Lunch Recipes</a>
+                        <a href="Appetizers.html">Appetizers & Snack Recipes</a>
+                        <a href="Dessert.html">Dessert Recipes</a>
+                        <a href="Drink.html">Drink & Cocktail Recipes</a>
+                        <a href="Side.html">Side Dish Recipes</a>
+                        <a href="Microwave.html">Microwave Recipes</a>
+                        <a href="Quick.html">Quick & Easy Recipes</a>
+                        <a href="Slow.html">Slow-Cooker Recipes</a>
+                        <a href="Air.html">Air Fryer Recipes</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">POPULAR</a>
+                    <div class="dropdown-content">
+                        <a href="Casserole.html">Casserole Recipes</a>
+                        <a href="chili.html">Chili Recipes</a>
+                        <a href="Soup.html">Soup Recipes</a>
+                        <a href="Pasta.html">Pasta Recipes</a>
+                        <a href="Bread.html">Bread Recipes</a>
+                        <a href="Cookie.html">Cookie Recipes</a>
+                        <a href="Salad.html">Salad Recipes</a>
+                        <a href="Tofu.html">Tofu Recipes</a>
+                        <a href="Copycat.html">Copycat Recipes</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">HEALTHY DIET</a>
+                    <div class="dropdown-content">
+                        <a href="Keto.html">Keto Recipes</a>
+                        <a href="Healthy.html">Healthy Recipes</a>
+                        <a href="Vegetarian.html">Vegetarian Recipes</a>
+                        <a href="Vegan.html">Vegan Recipes</a>
+                        <a href="Mediterranean.html">Mediterranean Diet Recipes</a>
+                        <a href="Weight.html">Weight Watchers Recipes</a>
+                        <a href="Carb.html">Low-Carb Recipes</a>
+                        <a href="Gluten.html">Gluten-Free Recipes</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#">HOLIDAYS</a>
+                    <div class="dropdown-content">
+                        <a href="Party.html">Dinner Party Recipes</a>
+                        <a href="Game.html">Game Day Recipes</a>
+                        <a href="Valentines.html">Valentine's Day Recipes</a>
+                        <a href="Easter.html">Easter Recipes</a>
+                        <a href="Mother.html">Mother's Day Recipes</a>
+                        <a href="Memorial.html">Memorial Day Recipes</a>
+                        <a href="Halloween.html">Halloween Recipes</a>
+                        <a href="Hanukkah.html">Hanukkah Recipes</a>
+                    </div>
+                </div>
+                <li><a class="nav-links" href="contact.html">CONTACT US</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="right-nav">
+                <span><a href="#"><i class="fa-solid fa-magnifying-glass" id="glass"></i></a></span>
+                <span><a href="login.php"><i class="fa-regular fa-user" id="login"></i></a></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-us">
+            <h1>Contact Us</h1>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            padding-left: 1.5%;
+            position: relative;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin-right: 68px;
+        }
+
+        .nav-list a {
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .nav-list a:hover {
+            background-color: #ccc;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            padding: 10px 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            border-radius: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .line {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+        }
+
+        .right-nav {
+            display: flex;
+            gap: 26px;
+            align-items: center;
+            margin-bottom: 16px;
+            margin-right: 49px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px);
+            background-color: #dfdcdc;
+        }
+
+        .contact-us {
+            background-color: #e7d5d5;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .contact-us h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .contact-us label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .contact-us input,
+        .contact-us textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-us button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ffc900c4;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-us button:hover {
+            background-color: #b39200;
+        }
+    </style>
+     <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html> -->
